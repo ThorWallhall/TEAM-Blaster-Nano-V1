@@ -1,3 +1,9 @@
+# PlatformIO project file for T.E.A.M. - Blaster Nano V1
+ .pio/
+
+# VSCode settings
+.vscode/
+ 
 # For PCBs designed using KiCad: https://www.kicad.org/
 # Format documentation: https://kicad.org/help/file-formats/
 
