@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>T.E.A.M. Blaster Nano V1 – Breadboard</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #1e1e1e; padding: 20px; display: flex; justify-content: center; min-height: 100vh; }
+  .wrap {
+    background: #f5f2e8;
+    border-radius: 10px;
+    padding: 16px 20px 20px;
+    box-shadow: 0 6px 32px rgba(0,0,0,.7);
+    width: 720px;
+  }
+  h2 {
+    font: bold 13px/1.5 'Courier New', monospace;
+    color: #333;
+    margin-bottom: 10px;
+    letter-spacing: .4px;
+  }
+  h2 span { color: #E8981D; }
+  svg { display: block; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h2>T.E.A.M. – Blaster Nano V1 &nbsp;|&nbsp; Phase 1 — <span>Breadboard-Aufbau</span></h2>
+<svg width="700" height="510" viewBox="0 0 700 510" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <!-- Breadboard hole patterns -->
+  <!-- Left side: cols a-e, origin at col_a(88) row_1(56) -->
+  <pattern id="ph-l" x="88" y="56" width="16" height="16" patternUnits="userSpaceOnUse">
+    <circle cx="0" cy="0" r="2.7" fill="#7B5B28" stroke="#5A3A08" stroke-width=".5"/>
+  </pattern>
+  <!-- Right side: cols f-j, origin at col_f(178) row_1(56) -->
+  <pattern id="ph-r" x="178" y="56" width="16" height="16" patternUnits="userSpaceOnUse">
+    <circle cx="0" cy="0" r="2.7" fill="#7B5B28" stroke="#5A3A08" stroke-width=".5"/>
+  </pattern>
+  <!-- Rail holes -->
+  <pattern id="ph-vl" x="41" y="56" width="16" height="16" patternUnits="userSpaceOnUse">
+    <circle cx="0" cy="0" r="2.4" fill="#BB6060" stroke="#993030" stroke-width=".5"/>
+  </pattern>
+  <pattern id="ph-nl" x="57" y="56" width="16" height="16" patternUnits="userSpaceOnUse">
+    <circle cx="0" cy="0" r="2.4" fill="#6060BB" stroke="#303099" stroke-width=".5"/>
+  </pattern>
+  <pattern id="ph-vr" x="264" y="56" width="16" height="16" patternUnits="userSpaceOnUse">
+    <circle cx="0" cy="0" r="2.4" fill="#BB6060" stroke="#993030" stroke-width=".5"/>
+  </pattern>
+  <pattern id="ph-nr" x="281" y="56" width="16" height="16" patternUnits="userSpaceOnUse">
+    <circle cx="0" cy="0" r="2.4" fill="#6060BB" stroke="#303099" stroke-width=".5"/>
+  </pattern>
+  <!-- Resistor body gradient -->
+  <linearGradient id="rg" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#ECC870"/>
+    <stop offset="100%" stop-color="#D2A840"/>
+  </linearGradient>
+</defs>
+
+<!--
+  GRID REFERENCE:
+  Row y = 56 + (row-1)*16  |  r3=88  r6=136  r7=152  r8=168  r10=200
+  r12=232  r13=248  r14=264  r15=280  r16=296  r18=328  r20=360
+  Cols: a=88 b=104 c=120 d=136 e=152 | gap | f=178 g=194 h=210 i=226 j=242
+  Rails: lv=41 lg=57 rv=264 rg=281
+-->
+
+<!-- ============================== BREADBOARD BODY ============================== -->
+<rect x="30" y="36" width="274" height="448" rx="7" fill="#CBC691" stroke="#A8A050" stroke-width="1.5"/>
+<!-- Left VCC rail -->
+<rect x="34" y="42" width="14" height="436" rx="2" fill="#FFE6E6" stroke="#DDA0A0" stroke-width=".5"/>
+<!-- Left GND rail -->
+<rect x="50" y="42" width="14" height="436" rx="2" fill="#E6E6FF" stroke="#A0A0DD" stroke-width=".5"/>
+<!-- Center notch / gap -->
+<rect x="156" y="42" width="20" height="436" fill="#B8B484"/>
+<!-- Right VCC rail -->
+<rect x="256" y="42" width="14" height="436" rx="2" fill="#FFE6E6" stroke="#DDA0A0" stroke-width=".5"/>
+<!-- Right GND rail -->
+<rect x="272" y="42" width="14" height="436" rx="2" fill="#E6E6FF" stroke="#A0A0DD" stroke-width=".5"/>
+
+<!-- Hole grid patterns -->
+<rect x="88" y="56" width="72" height="400" fill="url(#ph-l)"/>
+<rect x="178" y="56" width="72" height="400" fill="url(#ph-r)"/>
+<rect x="37" y="56" width="8" height="400" fill="url(#ph-vl)"/>
+<rect x="53" y="56" width="8" height="400" fill="url(#ph-nl)"/>
+<rect x="260" y="56" width="8" height="400" fill="url(#ph-vr)"/>
+<rect x="277" y="56" width="8" height="400" fill="url(#ph-nr)"/>
+
+<!-- Rail labels -->
+<text x="41" y="49" text-anchor="middle" style="font:bold 9px sans-serif;fill:#CC2222">+</text>
+<text x="57" y="49" text-anchor="middle" style="font:bold 9px sans-serif;fill:#2222CC">−</text>
+<text x="263" y="49" text-anchor="middle" style="font:bold 9px sans-serif;fill:#CC2222">+</text>
+<text x="281" y="49" text-anchor="middle" style="font:bold 9px sans-serif;fill:#2222CC">−</text>
+
+<!-- Column labels -->
+<text x="88"  y="51" text-anchor="middle" style="font:bold 8px monospace;fill:#6A4A20">a</text>
+<text x="104" y="51" text-anchor="middle" style="font:bold 8px monospace;fill:#6A4A20">b</text>
+<text x="120" y="51" text-anchor="middle" style="font:bold 8px monospace;fill:#6A4A20">c</text>
+<text x="136" y="51" text-anchor="middle" style="font:bold 8px monospace;fill:#6A4A20">d</text>
+<text x="152" y="51" text-anchor="middle" style="font:bold 8px monospace;fill:#6A4A20">e</text>
+<text x="178" y="51" text-anchor="middle" style="font:bold 8px monospace;fill:#6A4A20">f</text>
+<text x="194" y="51" text-anchor="middle" style="font:bold 8px monospace;fill:#6A4A20">g</text>
+<text x="210" y="51" text-anchor="middle" style="font:bold 8px monospace;fill:#6A4A20">h</text>
+<text x="226" y="51" text-anchor="middle" style="font:bold 8px monospace;fill:#6A4A20">i</text>
+<text x="242" y="51" text-anchor="middle" style="font:bold 8px monospace;fill:#6A4A20">j</text>
+
+<!-- Row numbers (y_text = 56+(r-1)*16+3) -->
+<text x="83" y="59"  text-anchor="end" style="font:7px monospace;fill:#7A5A2A"> 1</text>
+<text x="83" y="75"  text-anchor="end" style="font:7px monospace;fill:#7A5A2A"> 2</text>
+<text x="83" y="91"  text-anchor="end" style="font:bold 7px monospace;fill:#7A5A2A"> 3</text>
+<text x="83" y="107" text-anchor="end" style="font:7px monospace;fill:#7A5A2A"> 4</text>
+<text x="83" y="123" text-anchor="end" style="font:7px monospace;fill:#7A5A2A"> 5</text>
+<text x="83" y="139" text-anchor="end" style="font:bold 7px monospace;fill:#884400"> 6</text>
+<text x="83" y="155" text-anchor="end" style="font:bold 7px monospace;fill:#884400"> 7</text>
+<text x="83" y="171" text-anchor="end" style="font:7px monospace;fill:#7A5A2A"> 8</text>
+<text x="83" y="187" text-anchor="end" style="font:7px monospace;fill:#7A5A2A"> 9</text>
+<text x="83" y="203" text-anchor="end" style="font:bold 7px monospace;fill:#CC3333">10</text>
+<text x="83" y="219" text-anchor="end" style="font:7px monospace;fill:#7A5A2A">11</text>
+<text x="83" y="235" text-anchor="end" style="font:7px monospace;fill:#7A5A2A">12</text>
+<text x="83" y="251" text-anchor="end" style="font:bold 7px monospace;fill:#1A2E8A">13</text>
+<text x="83" y="267" text-anchor="end" style="font:bold 7px monospace;fill:#1A2E8A">14</text>
+<text x="83" y="283" text-anchor="end" style="font:bold 7px monospace;fill:#1A2E8A">15</text>
+<text x="83" y="299" text-anchor="end" style="font:bold 7px monospace;fill:#1A2E8A">16</text>
+<text x="83" y="315" text-anchor="end" style="font:7px monospace;fill:#7A5A2A">17</text>
+<text x="83" y="331" text-anchor="end" style="font:bold 7px monospace;fill:#7A5A2A">18</text>
+<text x="83" y="347" text-anchor="end" style="font:7px monospace;fill:#7A5A2A">19</text>
+<text x="83" y="363" text-anchor="end" style="font:bold 7px monospace;fill:#7A5A2A">20</text>
+<text x="83" y="379" text-anchor="end" style="font:7px monospace;fill:#7A5A2A">21</text>
+<text x="83" y="395" text-anchor="end" style="font:7px monospace;fill:#7A5A2A">22</text>
+<text x="83" y="411" text-anchor="end" style="font:7px monospace;fill:#7A5A2A">23</text>
+<text x="83" y="427" text-anchor="end" style="font:7px monospace;fill:#7A5A2A">24</text>
+<text x="83" y="443" text-anchor="end" style="font:7px monospace;fill:#7A5A2A">25</text>
+
+<!-- Power supply label -->
+<text x="40" y="33" text-anchor="middle" style="font:bold 7px sans-serif;fill:#CC2222">⚡5V</text>
+
+<!-- ============================== WIRES (drawn before components) ============================== -->
+
+<!-- === VCC wires (red) === -->
+<!-- Left rail r3 → 10kΩ VCC-Seite (col_b r3) -->
+<line x1="41" y1="88" x2="104" y2="88" stroke="#CC3333" stroke-width="2.5" stroke-linecap="round"/>
+<!-- Right rail r10 → 20kΩ VCC-Seite (col_h r10) -->
+<line x1="264" y1="200" x2="210" y2="200" stroke="#CC3333" stroke-width="2.5" stroke-linecap="round"/>
+<!-- Left rail r16 → NE555 Pin4/RST (col_e r16) -->
+<line x1="41" y1="296" x2="152" y2="296" stroke="#CC3333" stroke-width="2.5" stroke-linecap="round"/>
+<!-- Right rail r13 → NE555 Pin8/VCC (col_f r13) -->
+<line x1="264" y1="248" x2="178" y2="248" stroke="#CC3333" stroke-width="2.5" stroke-linecap="round"/>
+<!-- DFPlayer VCC → right VCC rail r3 -->
+<line x1="374" y1="88" x2="264" y2="88" stroke="#CC3333" stroke-width="2" stroke-linecap="round"/>
+
+<!-- === GND wires (dark blue) === -->
+<!-- Left GND r8 → 100nF Minus-Seite (col_a r8) -->
+<line x1="57" y1="168" x2="88" y2="168" stroke="#1A2E8A" stroke-width="2.5" stroke-linecap="round"/>
+<!-- Left GND r7 → Taster GND-Seite (col_c r7) -->
+<line x1="57" y1="152" x2="120" y2="152" stroke="#1A2E8A" stroke-width="2.5" stroke-linecap="round"/>
+<!-- Left GND r13 → NE555 Pin1/GND (col_e r13) -->
+<line x1="57" y1="248" x2="152" y2="248" stroke="#1A2E8A" stroke-width="2.5" stroke-linecap="round"/>
+<!-- Right GND r18 → 10µF Minus-Seite (col_i r18) -->
+<line x1="281" y1="328" x2="226" y2="328" stroke="#1A2E8A" stroke-width="2.5" stroke-linecap="round"/>
+<!-- Left GND r20 → LED Kathode (col_a r20) -->
+<line x1="57" y1="360" x2="88" y2="360" stroke="#1A2E8A" stroke-width="2.5" stroke-linecap="round"/>
+<!-- DFPlayer GND → right GND rail r4 -->
+<line x1="374" y1="104" x2="281" y2="104" stroke="#1A2E8A" stroke-width="2" stroke-linecap="round"/>
+
+<!-- === ORANGE SIGNAL (Taster-Signal → 555 TRIG + DFPlayer IO1) === -->
+
+<!-- Flying wire: DFPlayer IO1 → Taster-Signal row6 col_a
+     Bezier curve to avoid crossing right VCC strip hole at row6 -->
+<path d="M374,136 C330,114 140,114 88,136"
+      stroke="#E8981D" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+<!-- Bridge: left bus col_e → right bus col_f at row6 (center gap crossing) -->
+<line x1="152" y1="136" x2="178" y2="136" stroke="#E8981D" stroke-width="2.5" stroke-linecap="round"/>
+<!-- Down col_f right side: r6 → r12 (routing to avoid taster-GND at r7) -->
+<line x1="178" y1="136" x2="178" y2="232" stroke="#E8981D" stroke-width="2.5" stroke-linecap="round"/>
+<!-- Cross center gap at r12: col_f right → col_d left -->
+<line x1="178" y1="232" x2="136" y2="232" stroke="#E8981D" stroke-width="2.5" stroke-linecap="round"/>
+<!-- Down col_d: r12 → r14 (connects to NE555 Pin2 bus = row14 left) -->
+<line x1="136" y1="232" x2="136" y2="264" stroke="#E8981D" stroke-width="2.5" stroke-linecap="round"/>
+
+<!-- Orange junction dots -->
+<circle cx="88"  cy="136" r="4" fill="#E8981D" stroke="#B86800" stroke-width=".5"/>
+<circle cx="152" cy="136" r="4" fill="#E8981D" stroke="#B86800" stroke-width=".5"/>
+<circle cx="178" cy="136" r="4" fill="#E8981D" stroke="#B86800" stroke-width=".5"/>
+<circle cx="178" cy="232" r="4" fill="#E8981D" stroke="#B86800" stroke-width=".5"/>
+<circle cx="136" cy="232" r="4" fill="#E8981D" stroke="#B86800" stroke-width=".5"/>
+<circle cx="136" cy="264" r="4" fill="#E8981D" stroke="#B86800" stroke-width=".5"/>
+
+<!-- === PURPLE TIMING (Pin6 ↔ Pin7 node via col_h) === -->
+<!-- Short vertical wire connects row14-right-bus to row15-right-bus via col_h -->
+<line x1="210" y1="264" x2="210" y2="280" stroke="#8866CC" stroke-width="2" stroke-linecap="round"/>
+<circle cx="210" cy="264" r="3.5" fill="#8866CC"/>
+<circle cx="210" cy="280" r="3.5" fill="#8866CC"/>
+
+<!-- === BLUE DASHED (row 15 bus: NE555 Pin3 → 100Ω, same bus, no wire needed) === -->
+<line x1="152" y1="280" x2="104" y2="280" stroke="#4488CC" stroke-width="1.5"
+      stroke-dasharray="4,3" stroke-linecap="round" opacity=".7"/>
+
+<!-- === GREEN SPEAKER wires === -->
+<polyline points="374,168 348,168 348,256 374,256"
+          stroke="#229933" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="374,184 342,184 342,270 374,270"
+          stroke="#229933" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+<!-- ============================== COMPONENTS ============================== -->
+
+<!-- ──────────────── TASTER (r6-r7, cols c-d) ──────────────── -->
+<rect x="116" y="132" width="36" height="26" rx="3" fill="#2A2A2A" stroke="#111" stroke-width="1"/>
+<rect x="122" y="136" width="24" height="14" rx="2" fill="#3C3C3C"/>
+<circle cx="134" cy="143" r="5.5" fill="#313131" stroke="#606060" stroke-width="1"/>
+<circle cx="134" cy="143" r="2" fill="#484848"/>
+<text x="134" y="170" text-anchor="middle" style="font:bold 7.5px sans-serif;fill:#444">SW</text>
+<!-- Taster pin indicators -->
+<text x="120" y="131" text-anchor="middle" style="font:5px sans-serif;fill:#E8981D">S</text>
+<text x="152" y="131" text-anchor="middle" style="font:5px sans-serif;fill:#1A2E8A">G</text>
+
+<!-- ──────────────── 10kΩ PULLUP (col_b=104, r3=88 to r6=136) ──────────────── -->
+<line x1="104" y1="88"  x2="104" y2="100" stroke="#7A5018" stroke-width="1.5"/>
+<line x1="104" y1="124" x2="104" y2="136" stroke="#7A5018" stroke-width="1.5"/>
+<rect x="100" y="100" width="8" height="24" rx="1.5" fill="url(#rg)" stroke="#BF8820" stroke-width=".5"/>
+<!-- Bands: Brown-Black-Orange-Gold (10kΩ) -->
+<line x1="100" y1="105" x2="108" y2="105" stroke="#7A2800" stroke-width="2"/>
+<line x1="100" y1="109" x2="108" y2="109" stroke="#111"    stroke-width="2"/>
+<line x1="100" y1="113" x2="108" y2="113" stroke="#E87000" stroke-width="2"/>
+<line x1="100" y1="117" x2="108" y2="117" stroke="#CCAA00" stroke-width="1.5"/>
+<text x="112" y="115" style="font:7px sans-serif;fill:#555">10kΩ</text>
+
+<!-- ──────────────── 100nF CAP (col_a=88, r6=136 to r8=168) ──────────────── -->
+<line x1="88" y1="136" x2="88" y2="147" stroke="#7A5018" stroke-width="1.5"/>
+<line x1="88" y1="161" x2="88" y2="168" stroke="#7A5018" stroke-width="1.5"/>
+<!-- Ceramic disc cap body -->
+<rect x="84" y="147" width="8" height="14" rx="1" fill="#C07840" stroke="#A05820" stroke-width=".5"/>
+<text x="80" y="159" text-anchor="end" style="font:7px sans-serif;fill:#555">100nF</text>
+
+<!-- ──────────────── NE555 DIP-8 (r13-r16, cols e/f) ──────────────── -->
+<!-- IC chip body -->
+<rect x="148" y="244" width="34" height="60" rx="2" fill="#1A2E8A" stroke="#0A1E7A" stroke-width="1.2"/>
+<!-- Notch at top center -->
+<ellipse cx="165" cy="246" rx="5" ry="3" fill="#0F1E70"/>
+<!-- Pin labels inside (left: 1,2,3,4 / right: 8,7,6,5) -->
+<text x="150" y="253" style="font:5px monospace;fill:#7799EE">1</text>
+<text x="150" y="269" style="font:5px monospace;fill:#7799EE">2</text>
+<text x="150" y="285" style="font:5px monospace;fill:#7799EE">3</text>
+<text x="150" y="301" style="font:5px monospace;fill:#7799EE">4</text>
+<text x="175" y="253" text-anchor="end" style="font:5px monospace;fill:#7799EE">8</text>
+<text x="175" y="269" text-anchor="end" style="font:5px monospace;fill:#7799EE">7</text>
+<text x="175" y="285" text-anchor="end" style="font:5px monospace;fill:#7799EE">6</text>
+<text x="175" y="301" text-anchor="end" style="font:5px monospace;fill:#7799EE">5</text>
+<!-- IC label -->
+<text x="165" y="274" text-anchor="middle" style="font:bold 7px sans-serif;fill:#FFFFFF">NE555</text>
+<text x="165" y="284" text-anchor="middle" style="font:5px sans-serif;fill:#AABBFF">DIP-8</text>
+
+<!-- ──────────────── 20kΩ TIMING (col_h=210, r10=200 to r14=264) ──────────────── -->
+<line x1="210" y1="200" x2="210" y2="214" stroke="#7A5018" stroke-width="1.5"/>
+<line x1="210" y1="250" x2="210" y2="264" stroke="#7A5018" stroke-width="1.5"/>
+<rect x="206" y="214" width="8" height="36" rx="1.5" fill="url(#rg)" stroke="#BF8820" stroke-width=".5"/>
+<!-- Bands: Red-Black-Orange-Gold (20kΩ) -->
+<line x1="206" y1="220" x2="214" y2="220" stroke="#CC0000" stroke-width="2"/>
+<line x1="206" y1="225" x2="214" y2="225" stroke="#111"    stroke-width="2"/>
+<line x1="206" y1="230" x2="214" y2="230" stroke="#E87000" stroke-width="2"/>
+<line x1="206" y1="235" x2="214" y2="235" stroke="#CCAA00" stroke-width="1.5"/>
+<text x="218" y="235" style="font:7px sans-serif;fill:#555">20kΩ</text>
+
+<!-- ──────────────── 10µF ELKO (col_i=226, r14=264 to r18=328) ──────────────── -->
+<line x1="226" y1="264" x2="226" y2="276" stroke="#7A5018" stroke-width="1.5"/>
+<line x1="226" y1="316" x2="226" y2="328" stroke="#7A5018" stroke-width="1.5"/>
+<!-- Cylindrical body -->
+<rect x="221" y="276" width="10" height="40" rx="2" fill="#2D4A2D" stroke="#1A3A1A" stroke-width="1"/>
+<text x="226" y="287" text-anchor="middle" style="font:bold 6px sans-serif;fill:#88EE88">+</text>
+<!-- Negative stripe at bottom -->
+<rect x="221" y="308" width="10" height="8" rx="0" fill="#141414"/>
+<text x="219" y="298" text-anchor="end" style="font:7px sans-serif;fill:#555">10µF</text>
+
+<!-- ──────────────── 100Ω LED WIDERSTAND (col_b=104, r15=280 to r18=328) ──────────────── -->
+<line x1="104" y1="280" x2="104" y2="293" stroke="#7A5018" stroke-width="1.5"/>
+<line x1="104" y1="315" x2="104" y2="328" stroke="#7A5018" stroke-width="1.5"/>
+<rect x="100" y="293" width="8" height="22" rx="1.5" fill="url(#rg)" stroke="#BF8820" stroke-width=".5"/>
+<!-- Bands: Brown-Black-Brown-Gold (100Ω) -->
+<line x1="100" y1="298" x2="108" y2="298" stroke="#7A2800" stroke-width="2"/>
+<line x1="100" y1="302" x2="108" y2="302" stroke="#111"    stroke-width="2"/>
+<line x1="100" y1="306" x2="108" y2="306" stroke="#7A2800" stroke-width="2"/>
+<line x1="100" y1="310" x2="108" y2="310" stroke="#CCAA00" stroke-width="1.5"/>
+<text x="112" y="310" style="font:7px sans-serif;fill:#555">100Ω</text>
+
+<!-- ──────────────── LED (col_a=88, r18=328 to r20=360) ──────────────── -->
+<line x1="88" y1="328" x2="88" y2="338" stroke="#7A5018" stroke-width="1.5"/>
+<line x1="88" y1="354" x2="88" y2="360" stroke="#7A5018" stroke-width="1.5"/>
+<!-- LED body (amber) -->
+<circle cx="88" cy="346" r="8.5" fill="#FFEE00" stroke="#CC9900" stroke-width="1" opacity=".92"/>
+<circle cx="88" cy="344" r="3.5" fill="#FFFFAA" opacity=".8"/>
+<text x="80" y="344" text-anchor="end" style="font:7px sans-serif;fill:#886600">LED</text>
+<text x="80" y="354" text-anchor="end" style="font:6px sans-serif;fill:#886600">(+)→</text>
+
+<!-- ============================== DFPLAYER PRO MODULE ============================== -->
+<!-- PCB board background -->
+<rect x="374" y="78" width="130" height="136" rx="6" fill="#1C6A1C" stroke="#125012" stroke-width="1.5"/>
+<!-- PCB trace lines (decoration) -->
+<line x1="390" y1="96"  x2="494" y2="96"  stroke="#288828" stroke-width=".5" opacity=".5"/>
+<line x1="390" y1="112" x2="494" y2="112" stroke="#288828" stroke-width=".5" opacity=".5"/>
+<line x1="390" y1="144" x2="494" y2="144" stroke="#288828" stroke-width=".5" opacity=".5"/>
+<line x1="390" y1="176" x2="494" y2="176" stroke="#288828" stroke-width=".5" opacity=".5"/>
+<line x1="390" y1="200" x2="494" y2="200" stroke="#288828" stroke-width=".5" opacity=".5"/>
+<!-- Main chip -->
+<rect x="398" y="108" width="50" height="44" rx="2" fill="#0E0E0E" stroke="#333" stroke-width=".5"/>
+<text x="423" y="134" text-anchor="middle" style="font:5px monospace;fill:#666">GP8403</text>
+<!-- MicroSD slot -->
+<rect x="463" y="128" width="24" height="16" rx="2" fill="#999" stroke="#777" stroke-width=".5"/>
+<rect x="464" y="129" width="22" height="14" rx="1" fill="#BBB"/>
+<text x="475" y="139" text-anchor="middle" style="font:5.5px sans-serif;fill:#555">SD</text>
+<!-- Module labels -->
+<text x="423" y="92"  text-anchor="middle" style="font:bold 9px sans-serif;fill:#AAFF99">DFPlayer Pro</text>
+<text x="423" y="104" text-anchor="middle" style="font:7px sans-serif;fill:#88CC77">DFR0768</text>
+<!-- Crystal / small component -->
+<rect x="450" y="108" width="10" height="20" rx="1" fill="#C0C0A0" stroke="#A0A080" stroke-width=".5"/>
+
+<!-- Left edge pin dots (connecting to wires) -->
+<circle cx="374" cy="88"  r="3.5" fill="#CC3333" stroke="#881111" stroke-width=".5"/>
+<circle cx="374" cy="104" r="3.5" fill="#1A2E8A" stroke="#0A1A6A" stroke-width=".5"/>
+<circle cx="374" cy="136" r="3.5" fill="#E8981D" stroke="#AA6600" stroke-width=".5"/>
+<circle cx="374" cy="168" r="3.5" fill="#229933" stroke="#116622" stroke-width=".5"/>
+<circle cx="374" cy="184" r="3.5" fill="#229933" stroke="#116622" stroke-width=".5"/>
+
+<!-- Pin labels left of DFPlayer -->
+<text x="370" y="91"  text-anchor="end" style="font:7px monospace;fill:#CC3333">VCC</text>
+<text x="370" y="107" text-anchor="end" style="font:7px monospace;fill:#1A2E8A">GND</text>
+<text x="370" y="139" text-anchor="end" style="font:7px monospace;fill:#E8981D">IO1</text>
+<text x="370" y="171" text-anchor="end" style="font:7px monospace;fill:#229933">SPK+</text>
+<text x="370" y="187" text-anchor="end" style="font:7px monospace;fill:#229933">SPK−</text>
+
+<!-- ============================== SPEAKER ============================== -->
+<rect x="372" y="240" width="100" height="84" rx="5" fill="#888" stroke="#666" stroke-width="1.5"/>
+<!-- Speaker cone rings -->
+<ellipse cx="422" cy="282" rx="32" ry="28" fill="#555" stroke="#444" stroke-width=".5"/>
+<ellipse cx="422" cy="282" rx="22" ry="19" fill="#606060"/>
+<ellipse cx="422" cy="282" rx="12" ry="10" fill="#6A6A6A"/>
+<ellipse cx="422" cy="282" rx="4"  ry="3.5" fill="#808080"/>
+<!-- Speaker label -->
+<text x="422" y="336" text-anchor="middle" style="font:bold 7.5px sans-serif;fill:#555">8Ω Lautsprecher</text>
+
+<!-- ============================== LEGEND ============================== -->
+<rect x="510" y="72" width="184" height="428" rx="5" fill="#F0EDD8" stroke="#C8C090" stroke-width="1"/>
+<text x="602" y="90" text-anchor="middle" style="font:bold 10px sans-serif;fill:#333">Legende</text>
+<line x1="518" y1="95" x2="686" y2="95" stroke="#C8C090" stroke-width=".5"/>
+
+<!-- Wire colors -->
+<text x="518" y="110" style="font:bold 8px sans-serif;fill:#555">Drähte:</text>
+
+<line x1="518" y1="124" x2="546" y2="124" stroke="#CC3333" stroke-width="2.5" stroke-linecap="round"/>
+<text x="552" y="127" style="font:8px sans-serif;fill:#333">5V (VCC)</text>
+
+<line x1="518" y1="140" x2="546" y2="140" stroke="#1A2E8A" stroke-width="2.5" stroke-linecap="round"/>
+<text x="552" y="143" style="font:8px sans-serif;fill:#333">GND</text>
+
+<line x1="518" y1="156" x2="546" y2="156" stroke="#E8981D" stroke-width="2.5" stroke-linecap="round"/>
+<text x="552" y="159" style="font:8px sans-serif;fill:#333">Taster-Signal</text>
+
+<line x1="518" y1="172" x2="546" y2="172" stroke="#8866CC" stroke-width="2" stroke-linecap="round"/>
+<text x="552" y="175" style="font:8px sans-serif;fill:#333">Timing Pin6↔7</text>
+
+<line x1="518" y1="188" x2="546" y2="188" stroke="#229933" stroke-width="2" stroke-linecap="round"/>
+<text x="552" y="191" style="font:8px sans-serif;fill:#333">Lautsprecher</text>
+
+<line x1="518" y1="204" x2="546" y2="204" stroke="#4488CC" stroke-width="1.5" stroke-dasharray="4,3"/>
+<text x="552" y="207" style="font:8px sans-serif;fill:#333">Bus-intern (kein Draht)</text>
+
+<line x1="518" y1="216" x2="686" y2="216" stroke="#C8C090" stroke-width=".5"/>
+
+<!-- Component positions -->
+<text x="518" y="230" style="font:bold 8px sans-serif;fill:#555">Bauteil-Positionen:</text>
+
+<rect x="518" y="238" width="7" height="7" fill="#2A2A2A" rx="1"/>
+<text x="530" y="246" style="font:7.5px sans-serif;fill:#333">Taster: r6–7, Sp. c–d</text>
+
+<rect x="518" y="252" width="7" height="7" fill="url(#rg)" stroke="#BF8820" stroke-width=".3" rx="1"/>
+<text x="530" y="260" style="font:7.5px sans-serif;fill:#333">10kΩ: r3–6, Sp. b</text>
+
+<rect x="518" y="266" width="7" height="7" fill="#C07840" rx="1"/>
+<text x="530" y="274" style="font:7.5px sans-serif;fill:#333">100nF: r6–8, Sp. a</text>
+
+<rect x="518" y="280" width="7" height="12" fill="#1A2E8A" rx="1"/>
+<text x="530" y="290" style="font:7.5px sans-serif;fill:#333">NE555: r13–16, Sp. e/f</text>
+
+<rect x="518" y="298" width="7" height="7" fill="url(#rg)" stroke="#BF8820" stroke-width=".3" rx="1"/>
+<text x="530" y="306" style="font:7.5px sans-serif;fill:#333">20kΩ: r10–14, Sp. h</text>
+
+<rect x="518" y="312" width="7" height="12" fill="#2D4A2D" rx="1"/>
+<text x="530" y="322" style="font:7.5px sans-serif;fill:#333">10µF: r14–18, Sp. i (+oben)</text>
+
+<rect x="518" y="330" width="7" height="7" fill="url(#rg)" stroke="#BF8820" stroke-width=".3" rx="1"/>
+<text x="530" y="338" style="font:7.5px sans-serif;fill:#333">100Ω: r15–18, Sp. b</text>
+
+<circle cx="521" cy="349" r="4.5" fill="#FFEE00" stroke="#CC9900" stroke-width=".5"/>
+<text x="530" y="352" style="font:7.5px sans-serif;fill:#333">LED: r18–20, Sp. a (+oben)</text>
+
+<line x1="518" y1="362" x2="686" y2="362" stroke="#C8C090" stroke-width=".5"/>
+
+<!-- Hinweise -->
+<text x="518" y="376" style="font:bold 8px sans-serif;fill:#555">Hinweise:</text>
+<text x="518" y="390" style="font:7px sans-serif;fill:#555">• Pin5 (CTRL): offen lassen</text>
+<text x="518" y="403" style="font:7px sans-serif;fill:#555">• Row 14 rechts: Pin7, 20kΩ-Bein,</text>
+<text x="518" y="414" style="font:7px sans-serif;fill:#555">  10µF(+) = gleicher Bus!</text>
+<text x="518" y="427" style="font:7px sans-serif;fill:#555">• Row 15 links: Pin3, 100Ω-Bein</text>
+<text x="518" y="438" style="font:7px sans-serif;fill:#555">  = gleicher Bus (Strichlinie)</text>
+<text x="518" y="451" style="font:7px sans-serif;fill:#555">• Signal-Draht: Bogen (orange)</text>
+<text x="518" y="462" style="font:7px sans-serif;fill:#555">  = Jumper über das Board</text>
+<text x="518" y="476" style="font:7px sans-serif;fill:#555">• DFPlayer: Kabel extern,</text>
+<text x="518" y="487" style="font:7px sans-serif;fill:#555">  nicht auf Steckbrett</text>
+
+<!-- Circuit summary box -->
+<rect x="518" y="494" width="168" height="0" rx="3" fill="#E8F0E8" stroke="#90C090" stroke-width=".5"/>
+
+</svg>
+</div>
+</body>
+</html>
