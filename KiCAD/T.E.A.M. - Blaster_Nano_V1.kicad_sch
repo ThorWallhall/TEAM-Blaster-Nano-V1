@@ -3174,6 +3174,28 @@
 			(embedded_fonts no)
 		)
 	)
+	(rectangle
+		(start 12.3825 12.3825)
+		(end 113.03 117.475)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "6d4f5fd8-4c6e-4ab6-b648-3cb94c588c71")
+	)
+	(text "Sektor 1 POWER\n"
+		(exclude_from_sim no)
+		(at 20.32 119.38 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "8ddf8b79-4b79-4637-9c38-6106462f8217")
+	)
 	(junction
 		(at 46.99 86.36)
 		(diameter 0)
@@ -3269,6 +3291,10 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f70ec4b4-71d7-40f9-8744-e1496c8d1252")
+	)
+	(no_connect
+		(at 77.47 113.03)
+		(uuid "f4e799fe-30ad-4de9-a3fa-c30c442f1609")
 	)
 	(wire
 		(pts
