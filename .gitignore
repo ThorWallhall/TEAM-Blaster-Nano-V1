@@ -2,4 +2,7 @@
 KiCAD/.history/
 KiCAD/*-backups/
 KiCAD/*.lck
+KiCAD/~*.lck
+KiCAD/*.kicad_prl
+
 
