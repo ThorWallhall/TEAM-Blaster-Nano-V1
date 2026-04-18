@@ -101,13 +101,14 @@
 		(descr "Capacitor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "capacitor")
 		(property "Reference" "C14"
-			(at 2.335 0.11 0)
+			(at 0.305 0.91 0)
 			(layer "F.SilkS")
 			(uuid "f13839ab-fbed-4295-90e0-a27e6cdabf4c")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 0.5 1)
+					(thickness 0.1)
+					(bold yes)
 				)
 			)
 		)
@@ -614,7 +615,7 @@
 		(descr "Diode SMA (DO-214AC)")
 		(tags "Diode SMA (DO-214AC)")
 		(property "Reference" "D3"
-			(at 0.75 2.61 0)
+			(at 4.65 1.41 0)
 			(layer "F.SilkS")
 			(uuid "6f2ee227-7cf1-4824-b866-7499a8658418")
 			(effects
@@ -2739,7 +2740,7 @@
 		(descr "JST XH series connector, B2B-XH-A (http://www.jst-mfg.com/product/pdf/eng/eXH.pdf)")
 		(tags "connector JST XH vertical")
 		(property "Reference" "J3"
-			(at 1.25 -3.55 0)
+			(at 6.265 -1.25 0)
 			(layer "F.SilkS")
 			(uuid "2fab105c-17cb-4d6f-89ce-806cd8171ac6")
 			(effects
@@ -5268,7 +5269,7 @@
 		(descr "JST XH series connector, B2B-XH-A (http://www.jst-mfg.com/product/pdf/eng/eXH.pdf)")
 		(tags "connector JST XH vertical")
 		(property "Reference" "J4"
-			(at 1.25 -3.55 0)
+			(at -4.03 -1.72 0)
 			(layer "F.SilkS")
 			(uuid "ef630922-bf64-45cc-9aa6-f5280848d683")
 			(effects
@@ -6658,7 +6659,7 @@
 		(descr "Capacitor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "capacitor")
 		(property "Reference" "C6"
-			(at 2.015 0.035 90)
+			(at -1.925 0.035 90)
 			(layer "F.SilkS")
 			(uuid "63a96e51-78f3-4687-b0cb-b1dcee483316")
 			(effects
@@ -8388,7 +8389,7 @@
 		(descr "JST XH series connector, B2B-XH-A (http://www.jst-mfg.com/product/pdf/eng/eXH.pdf)")
 		(tags "connector JST XH vertical")
 		(property "Reference" "J5"
-			(at 1.25 -3.55 0)
+			(at -3.955 -1.35 0)
 			(layer "F.SilkS")
 			(uuid "84674b88-ba2e-4881-b75f-0d55a4875e24")
 			(effects
@@ -8686,7 +8687,7 @@
 		(uuid "be5a2c98-0691-4f66-8cc2-3877061a371a")
 		(at 150.495 94.615 90)
 		(property "Reference" "U6"
-			(at -7.225 -11.235 90)
+			(at -9.185 -11.235 90)
 			(layer "F.SilkS")
 			(uuid "594d73f7-7fcb-49b0-ae74-6616fc7cfa7d")
 			(effects
@@ -10119,7 +10120,7 @@
 		(descr "Through hole straight pin header, 2x03, 2.54mm pitch, double rows")
 		(tags "Through hole pin header THT 2x03 2.54mm double row")
 		(property "Reference" "J6"
-			(at -2.785 4.19 90)
+			(at -0.31 -3.145 180)
 			(layer "F.SilkS")
 			(uuid "91692238-1546-4266-8e93-42f585467346")
 			(effects
