@@ -1667,7 +1667,7 @@
 				)
 			)
 		)
-		(property "Value" "Crystal"
+		(property "Value" "Crystal_GND34"
 			(at 0 2.45 0)
 			(layer "F.Fab")
 			(uuid "dbea19a8-4e9a-41f1-8748-91c10d7097ef")
@@ -1689,7 +1689,7 @@
 				)
 			)
 		)
-		(property "Description" "Crystal"
+		(property "Description" "Four pin crystal, GND on pins 2 and 3"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -1745,7 +1745,7 @@
 		(units
 			(unit
 				(name "A")
-				(pins "1" "2")
+				(pins "1" "3" "4" "2")
 			)
 		)
 		(attr smd)
@@ -1820,7 +1820,7 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.208333)
 			(net "Net-(U4-PB7)")
-			(pinfunction "2_2")
+			(pinfunction "4_2")
 			(pintype "passive")
 			(uuid "0090eef2-9472-42aa-a41d-aedfedcda925")
 		)
@@ -1829,6 +1829,9 @@
 			(size 1.4 1.2)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.208333)
+			(net "GND")
+			(pinfunction "G_3")
+			(pintype "passive")
 			(uuid "3928cb3d-3ad0-4ea0-acae-8345f38c13d8")
 		)
 		(pad "4" smd roundrect
@@ -1836,6 +1839,9 @@
 			(size 1.4 1.2)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.208333)
+			(net "GND")
+			(pinfunction "G_4")
+			(pintype "passive")
 			(uuid "9215d14c-bf20-45d5-9053-c8d024730ae9")
 		)
 		(embedded_fonts no)
@@ -3029,7 +3035,7 @@
 	(footprint "Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm"
 		(layer "F.Cu")
 		(uuid "3413ecfc-c48d-47af-ba5e-f2d6f8081be2")
-		(at 242.715 153.165)
+		(at 238.59 155.995)
 		(descr "SMD3225/4, Crystal, 3.2x2.5mm package, SMD, http://www.txccrystal.com/images/pdf/7m-accuracy.pdf")
 		(property "Reference" "Y2"
 			(at 0 -2.45 0)
@@ -3042,7 +3048,7 @@
 				)
 			)
 		)
-		(property "Value" "Crystal"
+		(property "Value" "Crystal_GND34"
 			(at 0 2.45 0)
 			(layer "F.Fab")
 			(uuid "983459b9-6593-4b79-82b7-fbbb8314d262")
@@ -3064,7 +3070,7 @@
 				)
 			)
 		)
-		(property "Description" "Crystal"
+		(property "Description" "Four pin crystal, GND on pins 2 and 3"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -3120,7 +3126,7 @@
 		(units
 			(unit
 				(name "A")
-				(pins "1" "2")
+				(pins "1" "3" "4" "2")
 			)
 		)
 		(attr smd)
@@ -3195,7 +3201,7 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.208333)
 			(net "Net-(U5-XI)")
-			(pinfunction "2_2")
+			(pinfunction "4_2")
 			(pintype "passive")
 			(uuid "01d4b055-55f6-4dac-8c6d-fc8c662e2ea5")
 		)
@@ -3204,6 +3210,9 @@
 			(size 1.4 1.2)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.208333)
+			(net "GND")
+			(pinfunction "G_3")
+			(pintype "passive")
 			(uuid "2c23051f-fdb6-4383-9905-3fa5a7a25e34")
 		)
 		(pad "4" smd roundrect
@@ -3211,6 +3220,9 @@
 			(size 1.4 1.2)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.208333)
+			(net "GND")
+			(pinfunction "G_4")
+			(pintype "passive")
 			(uuid "0d10aca7-93a7-4669-89a9-035564a004aa")
 		)
 		(embedded_fonts no)
