@@ -6033,12 +6033,6 @@
 		(uuid "4668adb9-390e-48be-abf6-16d4a1fa6819")
 	)
 	(junction
-		(at 39.37 62.23)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "531134d3-ebb3-4a67-8815-332d58da4211")
-	)
-	(junction
 		(at 25.4 20.32)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6055,12 +6049,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6d1c008a-e051-4e20-ba03-d1c0a30e4dd5")
-	)
-	(junction
-		(at 49.53 86.36)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "767ebbf7-e502-45d7-be03-27e8580d7b57")
 	)
 	(junction
 		(at 87.63 40.64)
@@ -6129,6 +6117,12 @@
 		(uuid "b108f1a7-3f48-4e49-873a-9feb915693d4")
 	)
 	(junction
+		(at 60.96 86.36)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b1983e4f-6821-484d-9a27-50e3f42d96cf")
+	)
+	(junction
 		(at 39.37 38.1)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6139,12 +6133,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c30f1a64-742e-4f9c-8903-7dd90baf356e")
-	)
-	(junction
-		(at 63.5 86.36)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "cfbc1f13-d614-4760-8b91-dc1bcbd03a8c")
 	)
 	(junction
 		(at 39.37 81.28)
@@ -6630,7 +6618,7 @@
 	)
 	(wire
 		(pts
-			(xy 49.53 86.36) (xy 50.8 86.36)
+			(xy 45.72 86.36) (xy 50.8 86.36)
 		)
 		(stroke
 			(width 0)
@@ -6707,16 +6695,6 @@
 			(type default)
 		)
 		(uuid "5a243844-71b5-4c09-8e15-a3fd99016086")
-	)
-	(wire
-		(pts
-			(xy 63.5 86.36) (xy 64.77 86.36)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5ce40c80-2baa-4fba-9127-bd72ca6b3269")
 	)
 	(wire
 		(pts
@@ -7020,6 +6998,16 @@
 	)
 	(wire
 		(pts
+			(xy 60.96 86.36) (xy 64.77 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "947a5f0f-786e-4861-b404-290e5832fb57")
+	)
+	(wire
+		(pts
 			(xy 60.96 151.13) (xy 60.96 143.51)
 		)
 		(stroke
@@ -7137,16 +7125,6 @@
 			(type default)
 		)
 		(uuid "a40b261f-93ca-42d0-8971-187358c6d2f9")
-	)
-	(wire
-		(pts
-			(xy 39.37 64.77) (xy 39.37 62.23)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a48f13e9-503f-4587-9066-d32789a1f2fc")
 	)
 	(wire
 		(pts
@@ -7440,16 +7418,6 @@
 	)
 	(wire
 		(pts
-			(xy 49.53 64.77) (xy 49.53 86.36)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d811abfd-8128-4c67-b785-b595a85d8793")
-	)
-	(wire
-		(pts
 			(xy 125.73 146.05) (xy 125.73 175.26)
 		)
 		(stroke
@@ -7600,16 +7568,6 @@
 	)
 	(wire
 		(pts
-			(xy 39.37 64.77) (xy 49.53 64.77)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f6219537-441a-48af-91cb-89eb40ad9bef")
-	)
-	(wire
-		(pts
 			(xy 71.12 153.67) (xy 71.12 156.21)
 		)
 		(stroke
@@ -7670,7 +7628,7 @@
 	)
 	(wire
 		(pts
-			(xy 59.69 86.36) (xy 63.5 86.36)
+			(xy 59.69 86.36) (xy 60.96 86.36)
 		)
 		(stroke
 			(width 0)
@@ -7698,16 +7656,6 @@
 		)
 		(uuid "fec55d53-92b3-45cc-a43c-f412f40b91ea")
 	)
-	(wire
-		(pts
-			(xy 45.72 86.36) (xy 49.53 86.36)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ff20c8fd-64e7-4773-a167-6fbb50bc3ec9")
-	)
 	(label "DF_TX"
 		(at 166.37 132.08 0)
 		(effects
@@ -7717,6 +7665,16 @@
 			(justify left bottom)
 		)
 		(uuid "0599d4b4-3a7a-4c2b-aeea-f3387f7e5db7")
+	)
+	(label "VCC_PROT"
+		(at 64.77 86.36 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0b26dab1-cdc8-4b30-9bd0-f444446c3a39")
 	)
 	(label "DF_RX"
 		(at 187.96 40.64 90)
@@ -7728,6 +7686,26 @@
 		)
 		(uuid "0c7f59ac-6975-47fb-b29b-3a33db913376")
 	)
+	(label "VUSB"
+		(at 55.88 33.02 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0c9f4f3f-8134-4ee3-b6cd-6c88548825ba")
+	)
+	(label "OD"
+		(at 72.39 99.06 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0d1fdced-8fd2-448f-a669-d20f592eab85")
+	)
 	(label "USB_DP"
 		(at 41.91 81.28 0)
 		(effects
@@ -7737,6 +7715,16 @@
 			(justify left bottom)
 		)
 		(uuid "14b12a05-3ee7-4286-b96d-47c9d78ab038")
+	)
+	(label "STDBY"
+		(at 46.99 62.23 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1fa02154-8f23-45a9-8934-90bd33743b85")
 	)
 	(label "USB_DP"
 		(at 233.68 130.81 180)
@@ -7768,6 +7756,16 @@
 		)
 		(uuid "2caf8933-9211-4c2e-b776-b47ebfcc2760")
 	)
+	(label "CS"
+		(at 88.9 91.44 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "31f2cc38-0e06-45c9-9b17-e075d5900f98")
+	)
 	(label "USB_DM"
 		(at 233.68 133.35 180)
 		(effects
@@ -7777,6 +7775,16 @@
 			(justify right bottom)
 		)
 		(uuid "33a733fa-0230-4b51-9f56-398c2ef25303")
+	)
+	(label "CHRG"
+		(at 50.8 59.69 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "33a79310-f684-455e-952e-966fd437d5e9")
 	)
 	(label "VCC"
 		(at 208.28 92.71 180)
@@ -7888,6 +7896,16 @@
 		)
 		(uuid "81030eae-2c31-4bf7-ba5d-8c53913d29ae")
 	)
+	(label "CC2"
+		(at 39.37 69.85 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "82085095-e71e-4f9d-aa72-d52bc6fabf53")
+	)
 	(label "USB_DM"
 		(at 41.91 76.2 0)
 		(effects
@@ -7978,6 +7996,16 @@
 		)
 		(uuid "a1191d38-87c9-4515-b763-22288fa6b43b")
 	)
+	(label "CC1"
+		(at 39.37 67.31 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ab44af1c-bcda-4c5d-a76d-6f8fafd62f62")
+	)
 	(label "DF_TX"
 		(at 185.42 40.64 90)
 		(effects
@@ -7998,6 +8026,36 @@
 		)
 		(uuid "b61a4ab2-a150-402c-aba4-ddc5b0c162ed")
 	)
+	(label "VBUS"
+		(at 39.37 59.69 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "bce29df3-e950-49e7-946a-69d16b6ac3e7")
+	)
+	(label "LED_STDBY"
+		(at 45.72 48.26 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c95b24f4-9f05-4750-9251-cd8fe243b371")
+	)
+	(label "PROG"
+		(at 77.47 62.23 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ddd8e178-2f7b-459c-8952-3aab697a8cc2")
+	)
 	(label "RESET"
 		(at 269.24 140.97 0)
 		(effects
@@ -8017,6 +8075,16 @@
 			(justify left bottom)
 		)
 		(uuid "e5150a9c-2e33-430a-a5cd-06a786a5d64b")
+	)
+	(label "OC"
+		(at 77.47 100.33 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e64d68f8-ebea-4df2-99d1-83b8f17646bd")
 	)
 	(label "RESET"
 		(at 208.28 71.12 0)
@@ -8047,6 +8115,16 @@
 			(justify left bottom)
 		)
 		(uuid "ee93e079-8e7e-4cea-af6e-c3eb24bff0fc")
+	)
+	(label "LED_CHRG"
+		(at 50.8 49.53 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "fae081cb-7c28-4071-bf66-1832a3e03bf2")
 	)
 	(symbol
 		(lib_id "Device:R")
@@ -10391,7 +10469,7 @@
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
-		(at 63.5 86.36 0)
+		(at 60.96 86.36 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10399,10 +10477,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "61bab664-3345-4945-8534-6914e2325a8e")
 		(property "Reference" "#FLG1"
-			(at 63.5 84.455 0)
+			(at 60.96 84.455 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10413,7 +10490,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 63.5 81.28 0)
+			(at 59.69 78.74 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10423,7 +10500,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 63.5 86.36 0)
+			(at 60.96 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10434,7 +10511,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 63.5 86.36 0)
+			(at 60.96 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10445,7 +10522,7 @@
 			)
 		)
 		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 63.5 86.36 0)
+			(at 60.96 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10570,7 +10647,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "Conn_01x02"
+		(property "Value" "Akku"
 			(at 13.97 17.78 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15262,7 +15339,7 @@
 			)
 		)
 		(property "Value" "5.1 kΩ"
-			(at 43.18 63.5 90)
+			(at 43.18 64.77 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
