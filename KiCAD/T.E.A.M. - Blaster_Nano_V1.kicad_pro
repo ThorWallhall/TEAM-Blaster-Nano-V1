@@ -538,7 +538,18 @@
     "meta": {
       "version": 5
     },
-    "net_colors": null,
+    "net_colors": {
+      "/MCU_RX": "rgb(0, 72, 0)",
+      "/MCU_TX": "rgb(132, 0, 132)",
+      "/RESET": "rgb(0, 132, 0)",
+      "/USB_DM": "rgb(255, 153, 0)",
+      "/USB_DP": "rgb(0, 0, 255)",
+      "GND": "rgb(132, 132, 132)",
+      "Net-(J1-CC1)": "rgb(194, 194, 0)",
+      "Net-(J1-CC2)": "rgb(132, 132, 0)",
+      "VBATT": "rgb(255, 0, 0)",
+      "VCC": "rgb(255, 0, 0)"
+    },
     "netclass_assignments": null,
     "netclass_patterns": [
       {
@@ -793,7 +804,7 @@
         "uuid": "7d1ab14b-cfb4-466d-be7a-7a6932de244c"
       }
     ],
-    "used_designators": "#PWR32-33",
+    "used_designators": "",
     "variants": []
   },
   "sheets": [
